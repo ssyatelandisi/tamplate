@@ -1,7 +1,25 @@
 # tamplate
 前端html分离json模板
 
-**模板基于jQuery，需往项目里导入[jQuery.js](https://jquery.com/download/)和tamplate.js**
+- html内容
+
+  ```html
+  <html>
+      <div id="content">
+          <span>{{text}}</span>
+      </div>
+  </html>
+  ```
+
+- json内容
+
+  ```json
+  {
+      "text":"内容"
+  }
+  ```
+
+  **模板基于jQuery，需往项目里导入[jQuery.js](https://jquery.com/download/)和tamplate.js**
 
 1. 引用tamplate.js
 
