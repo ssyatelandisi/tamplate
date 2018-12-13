@@ -6,7 +6,6 @@ function template($aim, $jsonLink) {
     //发送ajax请求
     $.ajax({
         url: $jsonLink,
-        type: "post",
         dataType: "json",
         success: function (data, status) {
             if (status != "success") {
