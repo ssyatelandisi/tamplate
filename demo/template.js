@@ -6,6 +6,8 @@ function template($aim, $jsonLink) {
     //发送ajax请求
     $.ajax({
         url: $jsonLink,
+        //不指定type，默认为get方法。另外post方法不支持跨域。
+        // type: "post",
         dataType: "json",
         success: function (data, status) {
             if (status != "success") {

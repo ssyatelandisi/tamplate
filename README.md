@@ -4,7 +4,7 @@
 
 ## Demo
 
-[Demo展示](https://ssyatelandisi.github.io/template)
+[Demo展示](https://ssyatelandisi.github.io/template/demo/index.html)
 
 ## 准备内容
 
@@ -87,3 +87,19 @@
 </div>
 ...
 ```
+
+## 调整Ajax请求方法
+
+template.js文件
+
+```javascript
+...
+    //发送ajax请求
+    $.ajax({
+        url: $jsonLink,
+        //不指定type，默认为get方法。另外post方法不支持跨域。
+        //type: "post",
+        dataType: "json",
+...
+```
+
