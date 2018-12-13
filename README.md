@@ -1,23 +1,42 @@
-# tamplate
+# template.js
+
 前端html分离json模板
+
+## Demo
+
+[Demo展示](https://ssyatelandisi.github.io/template)
+
+## 准备内容
 
 - html内容
 
   ```html
-  <html>
-      <div id="content">
-          <span>{{text}}</span>
-      </div>
-  </html>
+  ...
+  <div id="content">
+      <h1>{{title_1}}</h1>
+      <p>{{paragraph}}</p>
+  </div>
+  ...
   ```
 
 - json内容
 
   ```json
-  {
-      "text":"内容"
-  }
+  [
+      {
+          "id": "1",
+          "codeName": "title_1",
+          "codeText": "标题1"
+      },
+      {
+          "id": "2",
+          "codeName": "paragraph",
+          "codeText": "这里是段落文本。"
+      }
+  ]
   ```
+
+## 使用方法
 
   **模板基于jQuery，需往项目里导入[jQuery.js](https://jquery.com/download/)和tamplate.js**
 
@@ -40,12 +59,31 @@
    <script>
        $(function(){
        	template($("#content"),"data.json");
-   	});
+       });
    </script>
    ...
    ```
 
    |   形参   |     $aim      |    $link     |
    | :------: | :-----------: | :----------: |
-   |   说明   |    目标id     | json文件位置 |
-   | 实参举例 | $("#content") |  data.json   |
+   |   说明   |  目标选择器   | json文件地址 |
+   | 实参举例 | $("#content") | "data.json"  |
+
+## 效果
+
+浏览器显示效果：
+
+```html
+标题1
+这里是段落文本。
+```
+浏览器Elements内容：
+
+```html
+...
+<div id="content">
+    <h1>标题1</h1>
+    <p>这里是段落文本。</p>
+</div>
+...
+```

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "codeName": "htmlTitle",
+    "codeText": "Template Demo"
+  },
+  {
+    "id": 2,
+    "codeName": "header",
+    "codeText": "Template Demo"
+  },
+  {
+    "id": 3,
+    "codeName": "footer_1",
+    "codeText": "🐌蜗牛壳，是家，也是承托的责任。蜗牛壳，是家，也是承托的责任。"
+  },
+  {
+    "id": 4,
+    "codeName": "footer_2",
+    "codeText": "2018 蜗牛壳-www.woniuke.cf"
+  },
+  {
+    "id": 5,
+    "codeName": "footerLink",
+    "codeText": "https://www.woniuke.cf"
+  },
+  {
+    "id": 6,
+    "codeName": "title_1",
+    "codeText": "标题1"
+  },
+  {
+    "id": 7,
+    "codeName": "paragraph",
+    "codeText": "这里是段落文本。"
+  }
+]
