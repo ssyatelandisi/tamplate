@@ -38,7 +38,7 @@
         <footer>
             <div class="container bg-dark p-4 text-center text-light small rounded">
                 <div class="container">{{footer_1}}</div>
-                <div class="container"><a class="text-light" href="{{footerLink}}" title="个人网站" target="_blank">{{footer_2}}</a></div>
+                <div class="container"><a class="text-light" href="{{footerLink}}" title="{{my_web}}" target="_blank">{{footer_2}}</a></div>
             </div>
         </footer>
     </div>
@@ -48,19 +48,20 @@
     <script>
         $(function () {
             var register = {
-                title: $("title").html(),
                 content: $("#content").html(),
                 footer: $("footer").html()
             };
             $("#do").click(function () {
-                template($("title"), "data.json");
                 template($("#content"), "data.json");
                 template($("footer"), "data.json");
+                $("#do").attr("disabled","disabled");
+                $("#recovery").removeAttr("disabled");
             });
             $("#recovery").click(function () {
-                $("title").html(register.title);
                 $("#content").html(register.content);
                 $("footer").html(register.footer);
+                $("#recovery").attr("disabled","disabled");
+                $("#do").removeAttr("disabled");
             });
         });
     </script>

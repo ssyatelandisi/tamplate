@@ -50,7 +50,7 @@
    ```
 
 
-2. 调用tamplate($aim,$link)
+2. 调用tamplate($aim,$link,$type)
 
    ```js
    ...
@@ -58,16 +58,17 @@
    <script>tamplate.js</script>
    <script>
        $(function(){
-       	template($("#content"),"data.json");
+       	template($("#content"),"data.json","get");
+       // 等同template($("#content"),"data.json");
        });
    </script>
    ...
    ```
 
-   |   形参   |     $aim      |    $link     |
-   | :------: | :-----------: | :----------: |
-   |   说明   |  目标选择器   | json文件地址 |
-   | 实参举例 | $("#content") | "data.json"  |
+   |   形参   |     $aim      |    $link     |         $type         |
+   | :------: | :-----------: | :----------: | :-------------------: |
+   |   说明   |  目标选择器   | json文件地址 | Ajax方法，不填默认get |
+   | 实参举例 | $("#content") | "data.json"  |  空着、"get"或“post”  |
 
 ## 效果
 
@@ -87,19 +88,3 @@
 </div>
 ...
 ```
-
-## 调整Ajax请求方法
-
-template.js文件
-
-```javascript
-...
-    //发送ajax请求
-    $.ajax({
-        url: $jsonLink,
-        //不指定type，默认为get方法。另外post方法不支持跨域。
-        //type: "post",
-        dataType: "json",
-...
-```
-

@@ -1,4 +1,5 @@
-function template($aim, $jsonLink) {
+//不指定$type，默认为get方法。
+function template($aim, $jsonLink, $type = "get") {
 
     //获取id里的html标记为字符串
     var str = $aim.html();
@@ -6,8 +7,7 @@ function template($aim, $jsonLink) {
     //发送ajax请求
     $.ajax({
         url: $jsonLink,
-        //不指定type，默认为get方法。另外post方法不支持跨域。
-        // type: "post",
+        type: $type,
         dataType: "json",
         success: function (data, status) {
             if (status != "success") {
