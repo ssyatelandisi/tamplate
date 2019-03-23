@@ -44,8 +44,8 @@
 
    ```javascript
    ...
-   <script>jQuery.min.js</script>
-   <script>tamplate.js</script>
+   <script src="jQuery.min.js"></script>
+   <script src="tamplate.js"></script>
    ...
    ```
 
@@ -54,8 +54,8 @@
 
    ```js
    ...
-   <script>jQuery.min.js</script>
-   <script>tamplate.js</script>
+   <script src="jQuery.min.js"></script>
+   <script src="tamplate.js"></script>
    <script>
        $(function(){
        	template($("#content"),"data.json","get");
